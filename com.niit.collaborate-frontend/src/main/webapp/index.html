@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html  ng-app="app" lang="en">
+<head>
+  <title>Index PAGE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <body>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/com.niit.collaborate">Collaborate</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/com.niit.collaborate-frontend">Home</a></li>
+         
+         <li><a href="#/aboutus">About Us</a></li>
+          	<li><a href="#/blog">Blog</a></li>
+          
+           
+        <!--     <li><a href="#/viewjob">View Job</a></li>
+            <li><a href="#/postjob">Post Job</a></li>
+             <li><a href="#/viewjobdetails">ViewJobDetails</a></li>
+              <li><a href="#/searchjob">Search  Job</a></li>
+           -->
+           <li><a href="#/joblist">Job List</a></li>
+          <li><a href="#/viewappliedjob">View Applied Job</a></li>
+          
+           <li><a href="#/event">Events</a></li>
+            <li><a href="#/userlist">UserList</a></li> 
+           <li><a href="#/forum">Forum</a></li>
+           
+            <li><a href="#/friend">Friends</a></li>
+             <li><a href="#/friendrequest">Friendlist</a></li>
+         
+      		 <li><a href="#/chatforum">ChatForum</a></li>
+         	<li><a href="#/chat">Chat</a></li>
+       </ul>
+       <ul class="nav navbar-nav navbar-right">
+       <div ng-controller="UserController as ctrl">
+    <div ng-hide="currentUser.username!==ctrl.user.username">  
+       <a href="#/login"><input type="submit" class="btn btn-primary navbar-btn" value="Login"/></a>
+      </div>
+      <div ng-hide="currentUser.username===ctrl.user.username">
+         <!-- <li><a href="#/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> -->
+         <input type="submit" ng-click="ctrl.logout()" class="btn btn-primary navbar-btn" value="Logout"/>
+      </div>
+      </div>      
+      </ul>
+   </div> 
+  </div>
+  </div>
+</nav>
+  </body>
+  </head>
+  <div>
+ </div>
+ 
+</div>
+<div ng-view></div>
+<script src="jquery-1.12.4.min.js"></script>
+<script src="bootstrap.min.js"></script>  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-route.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular-cookies.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.1/sockjs.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+
+<!-- <script src="resources/js/sockjs.js"></script>
+<script src="resources/js/stomp.js"></script>
+<script src="resources/js/stomp.min.js"></script>
+<script src="resources/js/lodash.js"></script>
+<script src="resources/js/lodash.min.js"></script>  -->
+ 
+ <script src="myapp.js"></script>
+ 
+  <script src="Home/HomeController.js"></script>
+  <script src="User/UserController.js"></script>
+  <script src="User/UserService.js"></script>
+  <script src="Blog/BlogController.js"></script> 
+  <script src="Event/EventController.js"></script>
+  <script src="Chat/ChatController.js"></script> 
+  <script src="Chat/ChatService.js"></script>
+  <script src="ChatForum/ChatForumController.js"></script>
+  <script src="ChatForum/ChatForumService.js"></script>
+  <script src="Friend/FriendController.js"></script> 
+  <script src="Friend/FriendService.js"></script> 
+  <script src="Forum/ForumController.js"></script>
+  <script src="Forum/ForumCommentController.js"></script>
+  <script src="Forum/ForumLikeController.js"></script>
+  <script src="BlogComment/BlogCommentController.js"></script>
+  <script src="BlogLike/BlogLikeController.js"></script>
+   <script src="Job/JobController.js"></script>
+  <script src="Job/JobApplicationController.js"></script>
+
+</html>
